@@ -1,3 +1,23 @@
+let player_choice=null;
+const rock = document.querySelector('#rock')
+rock.addEventListener('click', function(e){
+    player_choice = e.target.className
+    game(player_choice)
+});
+
+const paper = document.querySelector('#paper')
+paper.addEventListener('click', function(e){
+    player_choice = e.target.className
+    game(player_choice)
+});
+
+const scissors = document.querySelector('#scissors')
+scissors.addEventListener('click', function(e){
+    player_choice = e.target.className
+    game(player_choice)
+});
+
+
 function getComputerChoice(){
     let probability = Math.random(); 
     let choice = ""
@@ -10,7 +30,6 @@ function getComputerChoice(){
     else if(probability > 0.64){
         choice = "SCISSORS"; 
     }
-    console.log(choice)
     return choice
 
 }
@@ -27,36 +46,49 @@ function playRound(computer_choice, user_choice){
         win = true
     }
     if (win == true){
-        console.log(`Congrats, you win! ${user_choice} beats ${computer_choice}`)
         return "win"; 
     } 
     else if (win == false){
         if (computer_choice === user_choice){
-            console.log(`We have a draw`)
             return "draw"; 
         }
         else{
-            console.log(`You lose! ${computer_choice} beats ${user_choice}`)
             return "lose"; 
         }
     }
 }
-function game(){
-    let user_wins = 0, computer_wins = 0, status = ""; 
+function game(player_choice){
+    let status = ""; 
     let computer_choice;
-    let player_choice;
-    for(let i = 0; i < 5; i++){
-        computer_choice = getComputerChoice();
-        player_choice = prompt("Choose between ROCK, PAPER, SCISSORS")
+    const div_resultado = document.querySelector('.resultado');
+    computer_choice = getComputerChoice();
+    let result = document.createElement('h2'); 
+    result.classList.add('result');
+    
+    if(player_choice != null){
         status = playRound(computer_choice, player_choice.toUpperCase())
+        if (div_resultado.childNodes.length != 1){
+            let result_re = document.querySelector('.result')
+            div_resultado.removeChild(result_re)
+        }
         if (status === "win"){
-            user_wins += 1;
+            result.textContent = `YOU WIN ${player_choice.toUpperCase()} BEATS ${computer_choice}!`
         }
         else if (status === "lose"){
-            computer_wins += 1;
+            result.textContent = `YOU LOSE ${computer_choice} BEATS ${player_choice.toUpperCase()}`
         }
+        
+        else{
+            result.textContent = `IT'S A DRAW`
+        }
+        
+        div_resultado.appendChild(result)
+
     }
-    alert(`YOU WON ${user_wins} TIMES, LOSE ${computer_wins} TIMES, AND GOT A DRAW ${5-(computer_wins+user_wins)} TIMES`)
 }
 
-game();
+        
+
+
+
+

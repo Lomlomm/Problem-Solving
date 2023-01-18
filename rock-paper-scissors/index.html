@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+    <script src="rps.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script src="rps.js"></script>
+<body class="body">
+    <div class="header">
+        <h1 class="page-title">Rock Paper Scissors</h1>
+    </div>
+    <div class="selection">
+        <div class="rock" id ="rock">
+            <div class="card-title">ROCK</div>
+            <div class="image">
+                <img class='card' src="images/stone.png">
+            </div>
+        </div>
+        <div class="paper" id ="paper">
+            <div class="card-title">PAPER</div>
+            <div class="image">
+                
+            </div>
+        </div>
+        <div class="scissors" id ="scissors">
+            <div class="card-title">SCISSORS</div>
+            <div class="image"></div>
+        </div>
+    </div>
+    <div class="resultado">
+
+    </div>
+    <audio class="rock" src="sounds/rock.mp3"></audio>
+    <audio class="paper" src="sounds/paper.mp3"></audio>
+    <audio class="scissors" src="sounds/scissors.mp3"></audio>
+
 </body>
 </html>
