@@ -1,19 +1,27 @@
 let player_choice=null;
 const rock = document.querySelector('#rock')
-rock.addEventListener('click', function(e){
-    player_choice = e.target.className
+const rock_audio = document.querySelector('.rock-audio')
+rock.addEventListener('click', () => {
+    player_choice = 'rock'
+    rock_audio.play()
     game(player_choice)
 });
 
 const paper = document.querySelector('#paper')
-paper.addEventListener('click', function(e){
-    player_choice = e.target.className
+const paper_audio = document.querySelector('.paper-audio')
+
+paper.addEventListener('click', () => {
+    player_choice = 'paper'
+    paper_audio.play()
     game(player_choice)
 });
 
 const scissors = document.querySelector('#scissors')
-scissors.addEventListener('click', function(e){
-    player_choice = e.target.className
+const scissors_audio = document.querySelector('.scissors-audio')
+
+scissors.addEventListener('click', () => {
+    player_choice = 'scissors'
+    scissors_audio.play()
     game(player_choice)
 });
 

@@ -1,3 +1,12 @@
+body{
+    background-color: #2f3142;
+    font-family: 'Outfit', sans-serif;
+    color: silver;
+}
+.header{
+    font-size: 30px;
+    text-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+}
 .resultado,
 .header{
     display: flex;
@@ -16,14 +25,16 @@
 .scissors{
     height: 250px;
     width: 250px;
-    border-style: solid;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #222430;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .card-title{
     width: 250px;
     height: 70px;
+
 }
 .image{
     display: flex;
@@ -34,10 +45,21 @@
     height: 130px;
     box-sizing: border-box;
     padding: 0;
-    border-radius: 50%;
-    border-style: solid;
 }
+
 .card{
     height: 100px;
     width: 100px; 
 }
+.card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paper .card{
+    height: 90px;
+    width: 90px; 
+}
+

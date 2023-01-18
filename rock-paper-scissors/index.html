@@ -7,6 +7,9 @@
     <title>Rock Paper Scissors</title>
     <script src="rps.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body class="body">
     <div class="header">
@@ -14,7 +17,11 @@
     </div>
     <div class="selection">
         <div class="rock" id ="rock">
-            <div class="card-title">ROCK</div>
+            <div class="card-title">
+                <div>
+                    ROCK
+                </div>
+            </div>
             <div class="image">
                 <img class='card' src="images/stone.png">
             </div>
@@ -22,20 +29,22 @@
         <div class="paper" id ="paper">
             <div class="card-title">PAPER</div>
             <div class="image">
-                
+                <img class='card' src="images/paper.png">
             </div>
         </div>
         <div class="scissors" id ="scissors">
             <div class="card-title">SCISSORS</div>
-            <div class="image"></div>
+            <div class="image">
+                <img class='card' src="images/scissors.png">
+            </div>
         </div>
     </div>
     <div class="resultado">
 
     </div>
-    <audio class="rock" src="sounds/rock.mp3"></audio>
-    <audio class="paper" src="sounds/paper.mp3"></audio>
-    <audio class="scissors" src="sounds/scissors.mp3"></audio>
+    <audio class="rock-audio" src="sounds/rock.mp3"></audio>
+    <audio class="paper-audio" src="sounds/paper.mp3"></audio>
+    <audio class="scissors-audio" src="sounds/scissors.mp3"></audio>
 
 </body>
 </html>
